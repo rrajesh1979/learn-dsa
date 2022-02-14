@@ -16,6 +16,7 @@
         <lombok.version>1.18.22</lombok.version>
         <slf4j.version>1.7.33</slf4j.version>
         <logback.version>1.2.10</logback.version>
+        <jmh.version>1.34</jmh.version>
     </properties>
 
     <dependencyManagement>
@@ -48,6 +49,20 @@
                 <artifactId>guava</artifactId>
                 <version>31.0.1-jre</version>
             </dependency>
+
+            <!-- Benchmark -->
+            <dependency>
+                <groupId>org.openjdk.jmh</groupId>
+                <artifactId>jmh-core</artifactId>
+                <version>${jmh.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openjdk.jmh</groupId>
+                <artifactId>jmh-generator-annprocess</artifactId>
+                <version>${jmh.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -68,6 +83,14 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.openjdk.jmh</groupId>
+            <artifactId>jmh-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.openjdk.jmh</groupId>
+            <artifactId>jmh-generator-annprocess</artifactId>
         </dependency>
     </dependencies>
     
